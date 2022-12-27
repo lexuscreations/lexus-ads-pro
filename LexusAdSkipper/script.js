@@ -50,7 +50,7 @@
                 }
               })(this)
             ">${initialTextForLoopBtn}</button>
-            <button id="${appName}PictureInPlayBtn" style="cursor: pointer;background: white;" onclick="
+            <button id="${appName}PictureInPlayBtn" style="cursor: pointer;background: white;margin-right: 22px;" onclick="
               (async (thisEl) => {
                 const videoEl = document.querySelector('video.video-stream.html5-main-video');
                 await videoEl.requestPictureInPicture();
@@ -65,6 +65,7 @@
               videoEl.playbackRate = parseFloat(thisEl.value);
             })(this)">
               <option value="0.10">0.10</option>
+              <option value="1" selected>1</option>
               <option value="2.5">2.5</option>
               <option value="3">3</option>
               <option value="3.5">3.5</option>
