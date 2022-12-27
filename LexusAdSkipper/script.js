@@ -60,6 +60,18 @@
                 }
               })(this)
             ">PictureInPlay</button>
+            <select id="${appName}playSpeedAdjustBtn" style="cursor: pointer;background: white;" title="playSpeed" onchange="((thisEl) => {
+              const videoEl = document.querySelector('video.video-stream.html5-main-video');
+              videoEl.playbackRate = parseFloat(thisEl.value);
+            })(this)">
+              <option value="0.10">0.10</option>
+              <option value="2.5">2.5</option>
+              <option value="3">3</option>
+              <option value="3.5">3.5</option>
+              <option value="4">4</option>
+              <option value="4.5">4.5</option>
+              <option value="5">5</option>
+            </select>
           </div>`
         );
       } else {
