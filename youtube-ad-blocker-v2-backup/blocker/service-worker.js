@@ -6,12 +6,11 @@ const initialData = {
     week: 0,
     month: 0,
     total: 0,
-  }
+  },
 };
 
 const MessageTypeEnum = {
   SKIPPED_AD_DATA: "SKIPPED_AD_DATA",
-  PAGE_RELOAD_REQUEST: "PAGE_RELOAD_REQUEST",
   EXTENSION_STATE_REQUEST: "EXTENSION_STATE_REQUEST",
   EXTENSION_STATE_RESPONSE: "EXTENSION_STATE_RESPONSE",
 };
@@ -46,39 +45,42 @@ chrome.runtime.onInstalled.addListener((details) => {
 });
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request?.messageType === MessageTypeEnum.SKIPPED_AD_DATA) {
-    chrome.storage.local.get(
-      ["savedSkippedAdsLogs"],
-      ({ savedSkippedAdsLogs }) => {
-        savedSkippedAdsLogs = savedSkippedAdsLogs
-          ? JSON.parse(savedSkippedAdsLogs)
-          : [];
+  if (request.messageType) {
+    if (request.messageType === MessageTypeEnum.SKIPPED_AD_DATA) {
+      chrome.storage.local.get(
+        ["savedSkippedAdsLogs"],
+        ({ savedSkippedAdsLogs }) => {
+          savedSkippedAdsLogs = savedSkippedAdsLogs
+            ? JSON.parse(savedSkippedAdsLogs)
+            : [];
 
-        const timestamp = Date.now();
-        let adDurationInSeconds;
-        if (!request.skippedAdData.duration) adDurationInSeconds = 0;
-        else
-          adDurationInSeconds = getSecondsFromFormattedDuration(
-            request.skippedAdData.duration
-          );
-        savedSkippedAdsLogs.push([timestamp, adDurationInSeconds]);
-        saveData("savedSkippedAdsLogs", savedSkippedAdsLogs);
-      }
-    );
-  } else if (request?.messageType === MessageTypeEnum.EXTENSION_STATE_REQUEST) {
-    chrome.storage.local.get(["savedData"], ({ savedData }) => {
-      if (savedData) savedData = JSON.parse(savedData);
-      else {
-        savedData = initialData;
-        saveData("savedData", savedData);
-      }
+          const timestamp = Date.now();
+          let adDurationInSeconds;
+          if (!request.skippedAdData.duration) adDurationInSeconds = 0;
+          else
+            adDurationInSeconds = getSecondsFromFormattedDuration(
+              request.skippedAdData.duration
+            );
+          savedSkippedAdsLogs.push([timestamp, adDurationInSeconds]);
+          saveData("savedSkippedAdsLogs", savedSkippedAdsLogs);
+        }
+      );
+    } else if (
+      request.messageType === MessageTypeEnum.EXTENSION_STATE_REQUEST
+    ) {
+      chrome.storage.local.get(["savedData"], ({ savedData }) => {
+        if (savedData) savedData = JSON.parse(savedData);
+        else {
+          savedData = initialData;
+          saveData("savedData", savedData);
+        }
 
-      chrome.tabs.sendMessage(sender.tab.id, {
-        messageType: MessageTypeEnum.EXTENSION_STATE_RESPONSE,
-        isExtensionEnabled: savedData.isExtensionEnabled,
+        chrome.tabs.sendMessage(sender.tab.id, {
+          messageType: MessageTypeEnum.EXTENSION_STATE_RESPONSE,
+          isExtensionEnabled: savedData.isExtensionEnabled,
+        });
       });
-    });
+    }
   }
-
   sendResponse();
 });

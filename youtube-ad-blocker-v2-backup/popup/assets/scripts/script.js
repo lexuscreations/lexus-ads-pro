@@ -1,10 +1,9 @@
 const dayLength = 86400000; // 24 * 60 * 60 * 1000;
 
 const MessageTypeEnum = {
-  SKIPPED_AD_DATA: "SKIPPED_AD_DATA",
   PAGE_RELOAD_REQUEST: "PAGE_RELOAD_REQUEST",
-  EXTENSION_STATE_REQUEST: "EXTENSION_STATE_REQUEST",
-  EXTENSION_STATE_RESPONSE: "EXTENSION_STATE_RESPONSE",
+  REQUEST_PICTURE_IN_PLAY: "REQUEST_PICTURE_IN_PLAY",
+  UPDATE_PLAY_SPEED: "UPDATE_PLAY_SPEED",
 };
 
 const ItemsEnum = {
@@ -129,6 +128,27 @@ const main = () => {
     saveData("savedData", data);
     askAllYoutubeTabsToReload(target.checked);
   });
+
+  $("#pictureInPlay").addEventListener("click", function () {
+    this.classList.add("active");
+    chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+      chrome.tabs.sendMessage(tabs[0].id, {
+        messageType: MessageTypeEnum.REQUEST_PICTURE_IN_PLAY,
+      });
+    });
+  });
+
+  $("#more-controls-playSpeed-select").addEventListener(
+    "change",
+    ({ target }) => {
+      chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
+        chrome.tabs.sendMessage(tabs[0].id, {
+          messageType: MessageTypeEnum.UPDATE_PLAY_SPEED,
+          requestedSpeed: target.value,
+        });
+      });
+    }
+  );
 };
 
 window.addEventListener("load", main);

@@ -38,7 +38,8 @@ h1 {
 .container {
   width: 300px;
   min-height: 450px;
-  background: #e5e7eb url("../images/backgrounds/bg.jpg") no-repeat scroll center;
+  background: #e5e7eb url("../images/backgrounds/bg.jpg") no-repeat scroll
+    center;
   background-size: cover;
 }
 
@@ -112,4 +113,47 @@ h1 {
 
 .container .stats-container img {
   width: 50px;
+}
+
+.more-controls-sec {
+  margin: 3px 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.more-controls-sec select {
+  background-color: #0173b9;
+  color: white;
+  padding: 2px 58px 2px 12px;
+  border-radius: 4px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%239A9290' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+}
+
+.more-controls-sec .pictureInPlay {
+  border: 2.5px solid #0173b9;
+  padding: 3px 9px;
+  color: #0173b9;
+  font-weight: 900;
+  background: #d3d9dda3;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.more-controls-sec .pictureInPlay:not(.active):hover {
+  border: 2.5px solid #138319;
+  color: #626568;
+  background: #90e7bca3;
+  transform: scale(1.1);
+}
+
+.more-controls-sec .pictureInPlay:not(.active):active {
+  transform: scale(0.9);
+}
+
+.more-controls-sec .pictureInPlay.active {
+  border: 2.5px solid #199617;
+  color: #005c49;
+  background: #32de1d80;
+  cursor: no-drop;
 }
