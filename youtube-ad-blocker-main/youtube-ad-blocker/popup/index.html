@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <title>Youtube Ad Blocker</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flowbite@1.3.3/dist/flowbite.min.css"
+    />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="title">
+        <h1 class="pageHeading">Youtube Ad Blocker</h1>
+        <label
+          for="isExtensionEnabledCb"
+          class="relative cursor-pointer"
+          title="Switch on"
+        >
+          <input
+            type="checkbox"
+            id="isExtensionEnabledCb"
+            class="sr-only"
+            checked
+          />
+          <div
+            class="w-11 h-6 bg-gray-200 rounded-full toggle-bg dark:bg-gray-700 dark:border-gray-600"
+          ></div>
+        </label>
+      </div>
+
+      <div class="hero-title">
+        <p id="videos">ad-blocked</p>
+      </div>
+
+      <div class="count">
+        <p id="total-count">0</p>
+        <p class="desc" id="total-count-desc">Videos Skipped</p>
+      </div>
+
+      <div class="stats-container">
+        <div>
+          <img
+            src="./assets/images/logos/logo.png"
+            draggable="false"
+            alt="Youtube Alternative Logo"
+          />
+          <p>
+            <span id="today-count">0</span>
+            <span class="count-type">videos</span> today
+          </p>
+        </div>
+
+        <div>
+          <img
+            src="./assets/images/logos/logo.png"
+            draggable="false"
+            alt="Youtube Alternative Logo"
+          />
+          <p>
+            <span id="this-week-count">0</span>
+            <span class="count-type">videos</span> this week
+          </p>
+        </div>
+
+        <div>
+          <img
+            src="./assets/images/logos/logo.png"
+            draggable="false"
+            alt="Youtube Alternative Logo"
+          />
+          <p>
+            <span id="this-month-count">0</span>
+            <span class="count-type">videos</span> this month
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./assets/scripts/script.js"></script>
+  </body>
+</html>
