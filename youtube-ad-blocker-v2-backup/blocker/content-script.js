@@ -48,6 +48,11 @@ const handleAd = (resolve) => {
     arrEl.forEach((e) => e !== "0:00" && handleSkipAd(e, secondsSkipped));
   }
 
+  const promo_premium_banner = document.querySelector(
+    ".style-scope.yt-mealbar-promo-renderer .button-container.style-scope.yt-mealbar-promo-renderer .yt-spec-button-shape-next.yt-spec-button-shape-next--text.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--size-m"
+  );
+  if (promo_premium_banner && promo_premium_banner.hasOwnProperty('click')) promo_premium_banner.click();
+
   document.hideElementsBySelectors([
     ".ytd-companion-slot-renderer",
     ".ytd-watch-next-secondary-results-renderer.sparkles-light-cta",
