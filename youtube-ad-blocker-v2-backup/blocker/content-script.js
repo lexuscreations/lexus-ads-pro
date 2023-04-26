@@ -51,7 +51,7 @@ const handleAd = (resolve) => {
   const promo_premium_banner = document.querySelector(
     ".style-scope.yt-mealbar-promo-renderer .button-container.style-scope.yt-mealbar-promo-renderer .yt-spec-button-shape-next.yt-spec-button-shape-next--text.yt-spec-button-shape-next--mono.yt-spec-button-shape-next--size-m"
   );
-  if (promo_premium_banner && promo_premium_banner.hasOwnProperty("click"))
+  if (promo_premium_banner && "click" in promo_premium_banner)
     promo_premium_banner.click();
 
   document.hideElementsBySelectors([
@@ -99,24 +99,24 @@ const requestUpdatePlaySpeed = (requestedSpeed) => {
 
   requestExtensionState();
 
-  chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-    if (!request.messageType) return;
-    if (request.messageType === MessageTypeEnum.UPDATE_PLAY_SPEED) {
-      requestUpdatePlaySpeed(request.requestedSpeed);
+  chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+    if (!message.messageType) return;
+    if (message.messageType === MessageTypeEnum.UPDATE_PLAY_SPEED) {
+      requestUpdatePlaySpeed(message.requestedSpeed);
     } else if (
-      request.messageType === MessageTypeEnum.REQUEST_PICTURE_IN_PLAY
+      message.messageType === MessageTypeEnum.REQUEST_PICTURE_IN_PLAY
     ) {
       requestPictureInPlay();
-    } else if (request.messageType === MessageTypeEnum.PAGE_RELOAD_REQUEST) {
+    } else if (message.messageType === MessageTypeEnum.PAGE_RELOAD_REQUEST) {
       alert(
         `The status of the Youtube Ad Blocker is currently set to ${
-          request.isExtensionEnabled ? "on" : "off"
+          message.isExtensionEnabled ? "on" : "off"
         }. To ensure the extension functions work properly, all Youtube tabs will be reloaded.`
       );
       location.reload();
     } else if (
-      request.messageType === MessageTypeEnum.EXTENSION_STATE_RESPONSE &&
-      request.isExtensionEnabled
+      message.messageType === MessageTypeEnum.EXTENSION_STATE_RESPONSE &&
+      message.isExtensionEnabled
     )
       keepLooping();
   });

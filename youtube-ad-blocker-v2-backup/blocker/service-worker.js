@@ -1,5 +1,6 @@
 const initialData = {
   isExtensionEnabled: true,
+  plackSpeed: "1",
   videosSkipped: {
     today: 0,
     week: 0,
@@ -10,6 +11,7 @@ const initialData = {
 
 const MessageTypeEnum = {
   SKIPPED_AD_DATA: "SKIPPED_AD_DATA",
+  UPDATE_PLAY_SPEED: "UPDATE_PLAY_SPEED",
   EXTENSION_STATE_REQUEST: "EXTENSION_STATE_REQUEST",
   EXTENSION_STATE_RESPONSE: "EXTENSION_STATE_RESPONSE",
 };
@@ -74,10 +76,18 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
           saveData("savedData", savedData);
         }
 
-        chrome.tabs.sendMessage(sender.tab.id, {
-          messageType: MessageTypeEnum.EXTENSION_STATE_RESPONSE,
-          isExtensionEnabled: savedData.isExtensionEnabled,
-        });
+        [
+          {
+            messageType: MessageTypeEnum.EXTENSION_STATE_RESPONSE,
+            isExtensionEnabled: savedData.isExtensionEnabled,
+          },
+          {
+            messageType: MessageTypeEnum.UPDATE_PLAY_SPEED,
+            requestedSpeed: savedData.plackSpeed
+              ? savedData.plackSpeed
+              : initialData.plackSpeed,
+          },
+        ].forEach((obj) => chrome.tabs.sendMessage(sender.tab.id, obj));
       });
     }
   }

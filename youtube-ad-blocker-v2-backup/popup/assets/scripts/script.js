@@ -8,6 +8,7 @@ const MessageTypeEnum = {
 
 const initialData = {
   isExtensionEnabled: true,
+  plackSpeed: "1",
   videosSkipped: {
     today: 0,
     week: 0,
@@ -97,6 +98,7 @@ const updateUI = (data) => {
   $("#this-week-count").innerText = data.videosSkipped.week;
   $("#this-month-count").innerText = data.videosSkipped.month;
   $("#isExtensionEnabledCb").checked = data.isExtensionEnabled;
+  $("#more-controls-playSpeed-select").value = data.plackSpeed;
 };
 
 const main = () => {
@@ -112,6 +114,7 @@ const main = () => {
 
       const { videosSkipped } = getStats(skippedAdsLogs);
       data.videosSkipped = videosSkipped;
+      if (!data.plackSpeed) data.plackSpeed = initialData.plackSpeed;
       saveData("savedData", data);
       updateUI(data);
     }
@@ -136,6 +139,9 @@ const main = () => {
   $("#more-controls-playSpeed-select").addEventListener(
     "change",
     ({ target }) => {
+      data.plackSpeed = target.value;
+      updateUI(data);
+      saveData("savedData", data);
       chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
         chrome.tabs.sendMessage(tabs[0].id, {
           messageType: MessageTypeEnum.UPDATE_PLAY_SPEED,
