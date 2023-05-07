@@ -64,6 +64,7 @@ const handleAd = (resolve) => {
     ".ytd-statement-banner-renderer",
     ".ytd-video-masthead-ad-v3-renderer",
     ".ytd-unlimited-offer-module-renderer",
+    "ytd-ad-slot-renderer.style-scope.ytd-item-section-renderer",
     ".ytd-watch-next-secondary-results-renderer.sparkles-light-cta",
   ]);
 
