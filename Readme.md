@@ -7,7 +7,7 @@
 ## Design and Screenshots
 
 ### Figma Design
-Check out the Figma design for the Lexus-YT-Pro Chrome Extension: [Figma Design](https://www.figma.com/file/lKGIlBI7wNdRXfTv7TxAlW/Lexus-YT-Pro-chromeExtension?type=design&node-id=0%3A1&mode=design&t=ayT7FVU1CbAHHVnj-1) | Thanks to VisheshVishwakarma for Figma.
+Check out the Figma design for the Lexus-YT-Pro Chrome Extension: [Figma Design](https://www.figma.com/file/lKGIlBI7wNdRXfTv7TxAlW/Lexus-YT-Pro-chromeExtension?type=design&node-id=0%3A1&mode=design&t=ayT7FVU1CbAHHVnj-1).
 
 ![V2-extension-all-screen-screenshots](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/Desktop%20-%201.png)
 
@@ -82,7 +82,7 @@ These enhancements have been designed to provide users with a cleaner, more orga
 
 ## Contributing
 
-Contributions to Lexus-YT-Pro are welcome! Feel free to submit issues or pull requests for enhancements or fixes. Special thanks to VisheshVishwakarma for Figma UI design contributions.
+Contributions to Lexus-YT-Pro are welcome! Feel free to submit issues or pull requests for enhancements or fixes. Special thanks to VisheshVishwakarma - [[linkedin](https://www.linkedin.com/in/vishesh-vishwakarma-b28548284), [github](https://github.com/visheshcreations), [behance](https://www.behance.net/visheshvishwak)] for Figma UI design contributions.
 
 ## Disclaimer
 
