@@ -2,6 +2,34 @@
 
 <img src="https://raw.githubusercontent.com/lexuscreations/lexus-yt-ad-extensions/main/assets/icons/icon.png" alt="Lexus-YT-Pro Logo" width="200" height="200">
 
+<hr />
+
+## Design and Screenshots
+
+### Figma Design
+Check out the Figma design for the Lexus-YT-Pro Chrome Extension: [Figma Design](https://www.figma.com/file/lKGIlBI7wNdRXfTv7TxAlW/Lexus-YT-Pro-chromeExtension?type=design&node-id=0%3A1&mode=design&t=ayT7FVU1CbAHHVnj-1) | Thanks to VisheshVishwakarma for Figma.
+
+### Version 1 Screenshots
+- ![V1-chrome-extension-page-screenshot](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V1/V1-chrome-extension-page-screenshot.png)
+
+- ![V1-extension-screenshot2](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V1/V1-extension-screenshot2.png)
+  
+- ![V1-extension-screenshot1](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V1/V1-extension-screenshot1.png)
+
+### Version 2 Screenshots
+- ![V2-chrome-extension-page-screenshot](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/V2-chrome-extension-page-screenshot.png)
+  
+- ![V2-on-other-tab](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/V2-on-other-tab.png)
+![V2-only-on-youtubes-tab](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/V2-only-on-youtubes-tab.png)
+  
+- ![extensionScreen-toggleOff](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/extensionScreen-toggleOff.png)
+
+- ![extensionScreen-toggleOn-PictureOnPlay_Hover](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/extensionScreen-toggleOn-PictureOnPlay_Hover.png)
+  
+- ![extensionScreen-toggleOn-PictureOnPlay_Hover-1](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/extensionScreen-toggleOn-PictureOnPlay_Hover-1.png)
+
+<hr />
+
 ## Introduction
 
 Lexus-YT-Pro is a Chrome browser extension developed for learning purposes. Its main functionality is to block, skip, or remove YouTube ads. It serves as a personal project to explore browser extension development techniques.
@@ -71,7 +99,7 @@ These enhancements have been designed to provide users with a cleaner, more orga
 
 ## Contributing
 
-Contributions to Lexus-YT-Pro are welcome! Feel free to submit issues or pull requests for enhancements or fixes. Special thanks to Vishesh Vishwakarma for Figma UI design contributions.
+Contributions to Lexus-YT-Pro are welcome! Feel free to submit issues or pull requests for enhancements or fixes. Special thanks to VisheshVishwakarma for Figma UI design contributions.
 
 ## Disclaimer
 
