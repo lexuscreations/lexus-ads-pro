@@ -9,6 +9,8 @@
 ### Figma Design
 Check out the Figma design for the Lexus-YT-Pro Chrome Extension: [Figma Design](https://www.figma.com/file/lKGIlBI7wNdRXfTv7TxAlW/Lexus-YT-Pro-chromeExtension?type=design&node-id=0%3A1&mode=design&t=ayT7FVU1CbAHHVnj-1) | Thanks to VisheshVishwakarma for Figma.
 
+![V2-extension-all-screen-screenshots](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/Desktop%20-%201.png)
+
 <hr />
 
 ## Introduction
@@ -111,12 +113,3 @@ Lexus-YT-Pro on Other Tabs: No Access Needed. | (ensuring privacy)
 
 Lexus-YT-Pro will only work on: YouTube's Tab Only.
 - ![V2-only-on-youtubes-tab](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/V2-only-on-youtubes-tab.png)
-
-<hr />
-  
-- ![extensionScreen-toggleOff](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/extensionScreen-toggleOff.png)
-
-- ![extensionScreen-toggleOn-PictureOnPlay_Hover](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/extensionScreen-toggleOn-PictureOnPlay_Hover.png)
-  
-- ![extensionScreen-toggleOn-PictureOnPlay_Hover-1](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/extensionScreen-toggleOn-PictureOnPlay_Hover-1.png)
-
