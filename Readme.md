@@ -102,11 +102,17 @@ Lexus-YT-Pro is created by [LexusCreations]. You can connect with me on LinkedIn
 <hr />
 
 ### Version 2 Screenshots
+
+This is how our extension will appear once you load it unpacked.
 - ![V2-chrome-extension-page-screenshot](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/V2-chrome-extension-page-screenshot.png)
-  
+
+Lexus-YT-Pro on Other Tabs: No Access Needed. | (ensuring privacy)
 - ![V2-on-other-tab](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/V2-on-other-tab.png)
-  
+
+Lexus-YT-Pro will only work on: YouTube's Tab Only.
 - ![V2-only-on-youtubes-tab](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/V2-only-on-youtubes-tab.png)
+
+<hr />
   
 - ![extensionScreen-toggleOff](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/extensionScreen-toggleOff.png)
 
@@ -114,4 +120,3 @@ Lexus-YT-Pro is created by [LexusCreations]. You can connect with me on LinkedIn
   
 - ![extensionScreen-toggleOn-PictureOnPlay_Hover-1](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/extensionScreen-toggleOn-PictureOnPlay_Hover-1.png)
 
-<hr />
