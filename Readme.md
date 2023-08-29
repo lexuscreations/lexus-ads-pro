@@ -12,9 +12,46 @@ Lexus-YT-Pro is a Chrome browser extension developed for learning purposes. Its 
 - **Picture-in-Picture:** Activate picture-in-picture mode for multitasking.
 - **Video Speed Control:** Adjust playback speed from 0.10x to 5x.
 
+<hr />
+
 ## Latest Version: V2
 
 Lexus-YT-Pro has been updated to version 2 (V2), providing enhanced ad-blocking capabilities and improved user experience.
+
+## Version 2: Enhanced UI and Functionalities
+
+In version 1, the user interface included the `LexusAdSkipper: Activated` indicator above the video, with additional options adjacent to it. However, in version 2, the user experience has been significantly refined for better organization and ease of use.
+
+### Enhanced UI Interface
+
+#### Version 1
+- The `LexusAdSkipper: Activated` indicator was displayed persistently above the video player.
+- Additional options, such as speed adjustments and other functionalities, were located nearby.
+
+#### Version 2
+- A dedicated extension popup has been introduced for a cleaner user interface.
+- Users no longer see the `LexusAdSkipper: Activated` indicator and other options cluttering the video player area.
+- Users can now control the extension's functionality on-demand by clicking the extension icon to open the popup.
+
+### Enhanced Functionalities
+
+Both versions offer an enhanced ad-blocking experience and improved playback control:
+
+#### Version 1 (Patched)
+- Ad blocking capabilities were improved with enhanced ad removal.
+- Playback speed adjustments ranged from 0.20x to 3x.
+- Users gained the ability to skip only skippable ads.
+- A volume boost feature was introduced.
+
+#### Version 2
+- The harmful "boast volume" feature has been removed to ensure user safety.
+- Playback speed adjustments have been expanded to a wider range of 0.10x to 5x.
+- The "loop" option has been removed, as YouTube now provides this by default through right-click on videos.
+- All types of ad removal functionalities are now supported, ensuring a seamless ad-free experience.
+
+These enhancements have been designed to provide users with a cleaner, more organized UI and a feature-rich experience, ensuring they have better control over their viewing preferences.
+
+<hr />
 
 ## Installation
 
