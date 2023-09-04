@@ -113,3 +113,26 @@ Lexus-YT-Pro on Other Tabs: No Access Needed. | (ensuring privacy)
 
 Lexus-YT-Pro will only work on: YouTube's Tab Only.
 - ![V2-only-on-youtubes-tab](https://raw.githubusercontent.com/lexuscreations/lexus-youtube-extension/main/assets/screenshots/V2/V2-only-on-youtubes-tab.png)
+
+<hr />
+
+# V3
+
+#### V3 has been released, but please note that it does not target YouTube ads V1 and V2 are for youtube. Instead, it can remove almost all ads from almost all other internet websites. Please be aware that while V3 is completed, it has not yet been thoroughly tested.
+
+# Lexus Ads Blocker
+
+**Lexus Ads Blocker** is a Chrome extension that effectively removes ads from almost all websites, enhancing your internet browsing experience.
+
+## Description
+
+**Lexus Ads Blocker** is designed to significantly improve your online experience by removing ads from a wide range of websites. Say goodbye to annoying and distracting ads and enjoy faster and cleaner web browsing.
+
+## Features
+
+- Blocks ads on nearly all websites.
+- Improves webpage loading times.
+
+## Contributing
+
+We welcome contributions from the community. If you'd like to contribute to the development of Lexus Ads Blocker, please fork the repository and submit a pull request.
